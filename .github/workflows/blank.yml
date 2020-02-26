@@ -14,6 +14,7 @@ jobs:
     - name: Run a multi-line script
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
+        JOB_STATUS: ${{ toJson(job.status) }}
       run: |
-        echo {{job.status}}
+        echo $JOB_STATUS
 
