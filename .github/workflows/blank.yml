@@ -17,4 +17,5 @@ jobs:
         JOB_STATUS: ${{ toJson(job.status) }}
       run: |
         echo $JOB_STATUS
+        cat $GITHUB_EVENT_PATH
 
